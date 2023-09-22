@@ -1,11 +1,11 @@
 #ifndef VENDING_MACHINE
 #define VENDING_MACHINE
-//³o¬O.hÀÉ¡A³q±`®³¨Ó¼g«Å§i 
+//é€™æ˜¯.hæª”ï¼Œé€šå¸¸æ‹¿ä¾†å¯«å®£å‘Š 
 class Vending_machine{
-	public: //¥i¥Hµ¹user¨Ï¥Î 
+	public: //å¯ä»¥çµ¦userä½¿ç”¨ 
 		void ordered_chicken(); 
 		int money();
-	private://¥u¯àµ¹¦Û¨­class typeªºª«¥ó¨Ï¥Î 
+	private://åªèƒ½çµ¦è‡ªèº«class typeçš„ç‰©ä»¶ä½¿ç”¨ 
 		int price; 
 };
 
