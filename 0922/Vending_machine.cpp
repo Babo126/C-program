@@ -1,8 +1,8 @@
 #include "Vending_machine.h"
 #include <iostream> 
-//³o¬O.cppÀÉ¡A³q±`®³¨Ó¼g©w¸q
-void Vending_machine::ordered_chicken(){//"::"¬°½d³ò¸ÑªR¹Bºâ¤l¥Î¥H©w¸q¦¨­û¨ç¦¡ 
-	std::cout << "the machine get your order\n"; //¿é¥X 
+//é€™æ˜¯.cppæª”ï¼Œé€šå¸¸æ‹¿ä¾†å¯«å®šç¾©
+void Vending_machine::ordered_chicken(){//"::"ç‚ºç¯„åœè§£æžé‹ç®—å­ç”¨ä»¥å®šç¾©æˆå“¡å‡½å¼ 
+	std::cout << "the machine get your order\n"; //è¼¸å‡º 
 	price = 50;
 } 
 
