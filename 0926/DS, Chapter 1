@@ -21,7 +21,7 @@
       else{
         return n*fact(n-1); //重複呼叫自己，形成遞迴函數
       }
-      
+
 4. Binary Search
    def: Binary Search 中文為二元搜尋法，其他還有像  通常講到search就會連帶一起講sort。簡單來說就是從中間切一半取 middle，看待搜尋的 x 是 >,=,< middle 進行判斷。
    using iteration:
@@ -47,8 +47,10 @@
           return -1;
       }
 
+   ps:在進行 Binary Search 時 array 通常都是要經排序過的，若尚未排序則會出現找不到值的狀況發生。
+
 5. Permutation Generator
-   def:排列
+   def:排列 
 6. Fibonacci Sequence
 7. The towers of Hanoi
 8. Asymptotic O Notation
