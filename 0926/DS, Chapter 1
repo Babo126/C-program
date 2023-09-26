@@ -35,12 +35,20 @@
           }
           return -1; //回傳 -1 表示找不到 x
       }
+
    using  recursion:
       int BinarySearch(int *a, int x, const int left, const int right){
-          int middle = (left + right)/ 2
+          int middle = (left + right)/ 2;
+          if(left <= right){
+            if(x < a[middle]){return BinarySearch(a, x, left, middle - 1)};
+            else if(x > a[middle]){return BinarySearch(a, x, middle + 1, right)};
+            else{return middle};
+          }
+          return -1;
       }
 
 5. Permutation Generator
+   def:排列
 6. Fibonacci Sequence
 7. The towers of Hanoi
 8. Asymptotic O Notation
