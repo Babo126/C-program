@@ -1,0 +1,142 @@
+#HW3.1
+##
+題目:   Write a program to input a month and a date, then output the zodiac sign which the date belongs to.
+星座表:
+        Aquarius (January 20 – February 18)
+        Pisces (February 19 – March 20)
+        Aries (March 21 – April 19)
+        Taurus (April 20 – May 20)
+        Gemini (May 21 – June 20)
+        Cancer (June 21 – July 22)
+        Leo (July 23 – August 22)
+        Virgo (August 23 – September 22)
+        Libra (September 23 – October 22)
+        Scorpio (October 23 – November 21)
+        Sagittarius (November 22 – December 21)
+        Capricorn (December 22 – January 19
+
+sol:
+      #include<stdio.h>
+      #include<string.h>
+      
+      int main(){
+      	int month, date;
+      	int val=1;
+      	char str[15];
+      	printf("Please enter the month:\n");
+      	scanf("%d", &month);
+      	printf("Please enter the date:\n");
+      	scanf("%d", &date);
+      	
+      	switch(month){	
+      		default:
+      			val= val-1;
+      			break;
+      		case 1:
+      			if(date >= 20){
+      				strcpy(str, "Aquarius"); 
+      				/*特別注意:在C中不可以直接賦予字串值(ex: str[15]="Aqua")
+      				  必須使用strcpy函數，這是因為C語言中的字串是以字元陣列
+      				  的形式表示的，每個字元都佔用一個陣列元素。*/ 
+      			}
+      			else{
+      				strcpy(str, "Capricorn");
+      			}
+      			break;
+      		case 2:
+      			if(date >= 19){
+      				strcpy(str, "Pisces");
+      			}
+      			else{
+      				strcpy(str, "Aquarius");
+      			}
+      			break;
+      		case 3:
+      			if(date >= 21){
+      				strcpy(str, "Aries");
+      			}
+      			else{
+      				strcpy(str, "Pisces");
+      			}
+      			break;
+      		case 4:
+      			if(date >= 20){
+      				strcpy(str, "Taurus");
+      			}
+      			else{
+      				strcpy(str, "Aries"); 
+      			}
+      			break;
+      		case 5:
+      			if(date >= 21){
+      				strcpy(str, "Gemini");
+      			}
+      			else{
+      				strcpy(str, "Taurus");
+      			}
+      			break;
+      		case 6:
+      			if(date >= 21){
+      				strcpy(str, "Cancer");
+      			}
+      			else{
+      				strcpy(str, "Gemini");
+      			}
+      			break;
+      		case 7:
+      			if(date >= 23){
+      				strcpy(str, "Leo");
+      			}
+      			else{
+      				strcpy(str, "Cancer");
+      			}
+      			break;
+      		case 8:
+      			if(date >= 23){
+      				strcpy(str, "Virgo");
+      			}
+      			else{
+      				strcpy(str, "Leo");
+      			}
+      			break;
+      		case 9:
+      			if(date >= 23){
+      				strcpy(str, "Libra");
+      			}
+      			else{
+      				strcpy(str, "Virgo");
+      			}
+      			break;
+      		case 10:
+      			if(date >= 23){
+      				strcpy(str, "Scorpio");
+      			}
+      			else{
+      				strcpy(str, "Libra");
+      			}
+      			break;
+      		case 11:
+      			if(date >= 22){
+      				strcpy(str, "Sagittarius");
+      			}
+      			else{
+      				strcpy(str, "Scorpio");
+      			}
+      			break;
+      		case 12:
+      			if(date >= 22){
+      				strcpy(str, "Capricorn");
+      			}
+      			else{
+      				strcpy(str, "Sagittarius");
+      			}
+      			break;
+      	}
+      	
+      	if(val != 0){
+      		printf("%d/%d belongs to %s", month, date, str);	
+      	}
+      	else{
+      		printf("輸入錯誤!");
+      	}
+      } 
