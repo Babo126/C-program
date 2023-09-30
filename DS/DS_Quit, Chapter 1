@@ -33,7 +33,7 @@
     sol:
         字元'C'在ASCII中的數字是67，'E'則是69
 
-2.(求出下述x共要執行幾次) 
+2.Dtermine the frequency count for the statement in line 4 of the following program segment: 
   for(int i;i <= n; i++){
     for(int j;j <= n; j++){
       for(int k;k <= n; k++){
@@ -53,7 +53,7 @@
 
 特別注意：在這個程式中，x 的初始值沒有給定，所以你需要確保在使用 x 之前給它一個初始值，否則它的值將是不定的。
 
-3.(請寫出Binary Search的函數)
+3.Write a recursive C/C++ function to perform the binary search on a sorted array:
 ans:
     int Binary Search(int *a, int x, const int n){
       int left = 0, right = n-1;
