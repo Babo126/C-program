@@ -11,3 +11,60 @@ The violation table:
 Hint:
       The ASCII codes of character Y and y are 89 and 121.
       The ASCII codes of character N and n are 78 and 110.
+
+sol:
+      #include<stdio.h>
+      //縮短違規事項名稱 
+      #define red_light r1
+      #define speeding r2
+      #define no_license r3
+      #define without_helmet r4
+      #define using_cellphone r5
+      #define opposite_direction r6
+      
+      int main(){
+      	//設定成變數如果罰金有改比較容易 
+      	int r1 = 3600;
+      	int r2 = 1200;
+      	int r3 = 24000;
+      	int r4 = 500;
+      	int r5 = 3000;
+      	int r6 = 1800;
+      	char ansR1, ansR2, ansR3, ansR4, ansR5, ansR6;
+      	int pay=0;
+      	
+      	//輸入David所犯下的罰則 
+      	printf("Did David run a red light?\n");
+      	scanf(" %c", &ansR1);
+      	printf("Was David speeding?\n");
+      	scanf(" %c", &ansR2);
+      	printf("Does David have a driver's license?\n");
+      	scanf(" %c", &ansR3);
+      	printf("Was David wearing his helmet?\n");
+      	scanf(" %c", &ansR4);
+      	printf("Was David using the cell phone while riding?\n");
+      	scanf(" %c", &ansR5);
+      	printf("Was david riding in opposite direction?\n");
+      	scanf(" %c", &ansR6);
+      	
+      	if(ansR1 == 89 || ansR1 == 121){
+      		pay += r1;
+      	}
+      	if(ansR2 == 89 || ansR2 == 121){
+      		pay += r2;
+      	}
+      	if(ansR3 == 78 || ansR3 == 110){ //沒駕照才要罰錢(負判斷 
+      		pay += r3;
+      	}
+      	if(ansR4 == 78 || ansR4 == 110){ //沒戴安全帽才要罰錢(負判斷 
+      		pay += r4;
+      	}
+      	if(ansR5 == 89 || ansR5 == 121){
+      		pay += r5;
+      	}
+      	if((int)ansR6 == 89 || (int)ansR6 == 121){
+      		pay += r6;
+      	}	
+      	
+      	printf("David haves to pay $%d", pay);
+      } 
