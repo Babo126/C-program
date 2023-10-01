@@ -112,7 +112,7 @@ int main(){
 }
 ```
 
-<figure><img src="../../.gitbook/assets/未命名.png" alt="" width="563"><figcaption><p>輸出結果</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/未命名.png" alt="" width="563"><figcaption><p>輸出結果</p></figcaption></figure>
 
 [^1]: 使用預設值的建構子
 

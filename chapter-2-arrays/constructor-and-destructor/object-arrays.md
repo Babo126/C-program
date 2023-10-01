@@ -68,4 +68,8 @@ int main(){
 }
 ```
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>輸出結果</strong></p></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="563"><figcaption><p><strong>輸出結果</strong></p></figcaption></figure>
+
+</div>

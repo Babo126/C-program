@@ -4,8 +4,8 @@
 
 ## Chapter 1:Basic Conceps
 
-* [1's and 2's complements](chapter-1-basic-conceps/1s-and-2s-complements.md)
-* [ADT](chapter-1-basic-conceps/adt.md)
+* [🔴 1's and 2's complements](chapter-1-basic-conceps/1s-and-2s-complements.md)
+* [🔴 ADT](chapter-1-basic-conceps/adt.md)
 * [Factorial](chapter-1-basic-conceps/factorial.md)
 * [Binary Search](chapter-1-basic-conceps/binary-search.md)
 * [Permutation Generator](chapter-1-basic-conceps/permutation-generator.md)
@@ -18,12 +18,12 @@
 ## CHAPTER 2:Arrays
 
 * [Abstract Data Type and C++ Class](chapter-2-arrays/abstract-data-type-and-c++-class.md)
-* [Constructor & Destructor](chapter-2-arrays/constructor-and-destructor/README.md)
+* [Constructor & Destructor](chapter-2-arrays/constructor-and-destructor.md)
   * [Pointer Object](chapter-2-arrays/constructor-and-destructor/pointer-object.md)
   * [Object Arrays](chapter-2-arrays/constructor-and-destructor/object-arrays.md)
   * [Static Members](chapter-2-arrays/constructor-and-destructor/static-members.md)
-  * [Nested Class](chapter-2-arrays/constructor-and-destructor/nested-class.md)
-  * [Pass-by-Object](chapter-2-arrays/constructor-and-destructor/pass-by-object.md)
+  * [🔴 Nested Class](chapter-2-arrays/constructor-and-destructor/nested-class.md)
+  * [🔴 Pass-by-Object](chapter-2-arrays/constructor-and-destructor/pass-by-object.md)
   * [Friend](chapter-2-arrays/constructor-and-destructor/friend.md)
 * [Operator Overloading](chapter-2-arrays/operator-overloading.md)
 * [1-D Arrays](chapter-2-arrays/1-d-arrays.md)
