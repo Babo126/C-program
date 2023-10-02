@@ -48,7 +48,8 @@
 外層的迴圈使用 i 作為計數器，範圍是 0 到 n，共執行 n + 1 次。
 第二層的迴圈使用 j 作為計數器，範圍是 0 到 i，對於每個 i 都執行 i + 1 次。
 第三層的迴圈使用 k 作為計數器，範圍是 0 到 j，對於每個 j 都執行 j + 1 次。
-
+  original ans: n(n+1)(n+2)/6
+  original sol: 觀察一下，不難發現它的規律是 1 + (1+2) + (1+2+3)+ ...... + (1+2+3+...+n)，可以寫成sum(i=1~n) i(i+1)/2，展開後就是n(n+1)(n+2)/6，我這題沒拿到分是因為沒有展開。
 因此，x 的增加次數是三個迴圈的嵌套次數的乘積：(n + 1) * (i + 1) * (j + 1)
 
 特別注意：在這個程式中，x 的初始值沒有給定，所以你需要確保在使用 x 之前給它一個初始值，否則它的值將是不定的。
@@ -57,7 +58,7 @@
 ans:
     int Binary Search(int *a, int x, const int n){
       int left = 0, right = n-1;
-      while(left <= right){
+      while(left <= right){  //注意邊界條件!!
         int middle = (left+right)/2;
         if(x < a[middle]) right = middle -1;
         else if(x > a[middle]) left = middle+1;
