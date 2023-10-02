@@ -25,11 +25,15 @@
   * [🔴 Nested Class](chapter-2-arrays/constructor-and-destructor/nested-class.md)
   * [🔴 Pass-by-Object](chapter-2-arrays/constructor-and-destructor/pass-by-object.md)
   * [Friend](chapter-2-arrays/constructor-and-destructor/friend.md)
-* [Operator Overloading](chapter-2-arrays/operator-overloading/README.md)
-  * [🔴 Sets](chapter-2-arrays/operator-overloading/sets.md)
+* [Operator Overloading](chapter-2-arrays/operator-overloading.md)
+  * [🔴 Sets](chapter-2-arrays/sets.md)
 * [n-D Arrays](chapter-2-arrays/n-d-arrays/README.md)
   * [Row-major Order(From 2D to 1D)](chapter-2-arrays/n-d-arrays/row-major-order-from-2d-to-1d.md)
   * [Column-major Order](chapter-2-arrays/n-d-arrays/column-major-order.md)
 * [Polynomial](chapter-2-arrays/polynomial.md)
 * [🤯 Matrix](chapter-2-arrays/matrix.md)
 * [String](chapter-2-arrays/string.md)
+
+***
+
+* [CHAPTER 3: Stacks & Queues](chapter-3-stacks-and-queues.md)
