@@ -1,0 +1,33 @@
+/*求原數與反轉數的最大公因數*/ 
+#include<stdio.h>
+int gcd(int, int);
+int main(){
+	int n, rn;
+	printf("Enter an interger: ");
+	scanf("%d", &n);
+	
+	//反轉原數n 
+	int x = n;
+	while(x!=0){
+		rn = (x%10) + (rn*10);
+		x /= 10;
+	}
+	
+	//求最大公因數 
+	int y = gcd(n, rn);
+	
+	//打印結果 
+	printf("Reversed Number: %d\n", rn);
+	printf("GCD of %d and %d is %d", n, rn, y);
+}
+
+//最大公因數函數 
+int gcd(int a, int b){
+	int i, max;
+	for(i=1;a>=i && b>=i;i++){
+		if(a%i==0 && b%i==0){
+			max = i;
+		}
+	}
+	return max;
+}
