@@ -1,1 +1,43 @@
-1
+/*印出大於n的五個質數*/
+#include<stdio.h>
+#include<stdlib.h>
+#define N 5
+
+int isPrime(int);
+
+int main(){
+	int n;
+	int a[N]; //設定一陣列用來儲存待打印的數字 
+	printf("Input a number: ");
+	scanf("%d", &n);
+	
+	int i = n; //使用替身i避免改變原數字 
+	int count = 0; //使用count計算已經存了多少個數
+	while(count < N){
+		i++; //i從n開始往後走訪 
+		if(isPrime(i) == 1){ //若檢查數為質數，將該數存於陣列，並將count+1 
+			a[count] = i;
+			count++;
+		}		
+	}
+	
+	int j;
+	for(j=0;j<5;j++){
+		printf("%d ", a[j]);
+	}
+}
+
+//檢查質數函式 
+int isPrime(int num){
+	int i;
+	if(num == 1){
+		return 0;
+	}else{
+		for(i=2;i<num;i++){
+			if(num % i == 0){
+				return 0;
+			}
+		}
+	}
+	return 1;
+}
