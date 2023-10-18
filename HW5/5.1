@@ -1,0 +1,74 @@
+/*?A?B*/ 
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(){
+	//不重複的四個亂數 
+	srand(time(NULL));
+	int w, s, r[4];
+	for(w=0;w<4;w++){
+		do{
+			r[w] = rand() % 10;
+			for(s=0;s<w;s++){
+				if(r[w]==r[s]){
+					break;
+				}
+			}
+		}while(s!=w);
+		//printf("%d", r[w]);
+	}
+	//printf("\n"); 
+	
+	int cout=10;
+	while(1){
+		//讀取輸入四位數 
+		fflush(stdin);
+		int num, n[4];
+		int a=0, b=0;
+		char y;
+		printf("Input a 4 different number:");
+		scanf("%d", &num);
+		//將四位數存入陣列 
+		n[3]=num%10;
+		n[2]=(num/10)%10;
+		n[1]=(num/100)%10;
+		n[0]=(num/1000)%10;
+		
+		//判斷A、B 
+		int i, j;
+		for(i=0;i<4;i++){
+			for(j=0;j<4;j++){
+				if(n[i] == r[j]){
+					if(i == j){
+						a++;
+					}
+					else{
+						b++;
+					}
+				}
+			}
+		}
+		
+		//猜中則結束系統 
+		if(a==4){
+			printf("您猜對了!!");
+			break;
+		}
+		else{
+			if(cout>1){
+				printf("結果:%dA%dB，還有%d次機會...\n",a,b, cout-1);
+				cout--;	
+			}
+			else{
+				printf("結果:%dA%dB，還有%d次機會...\n",a,b, cout-1);
+				printf("失敗，猜超過十次，答案是:");
+				int t;
+				for(t=0;t<4;t++){
+					printf("%d", r[t]);
+				}
+				break;
+			}
+		}
+	}
+} 
