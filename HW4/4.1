@@ -1,1 +1,59 @@
-i
+/*印組合*/ 
+#include <stdio.h> 
+#include <stdlib.h> 
+#define N 5 
+
+extern int count=0; //宣告全域變數 
+//函式宣告 
+void perm(int*, int, void (*)(int*));
+void rotate(int*, int, int);
+void copy(int*, int*);
+void print(int*);
+
+int main(void) { 
+    int num[N] = {1, 2, 3, 4, 5};  
+    perm(num, 0, print); 
+    printf("\nThere are %d ordders in total", count/N); //count/N是因為count是每個數字print的時候都會+1，有幾組要除以每一組有幾個數字 
+    return 0; 
+} 
+
+void perm(int* num, int i, void (*take)(int*)){ 
+	if(i < N) { //尚未走訪到最後一個元素時 
+        int j;
+        for(j = i; j < N; j++) {
+            int to[N]; 
+            copy(num, to);  //複製陣列，避免改變原陣列 
+            rotate(to, i, j); //把待固定的元素抽出來放首位 
+            perm(to, i + 1, take);  //遞迴 
+        } 
+    } 
+	else{
+		take(num); //呼叫打印函數 
+	}
+}  
+
+void rotate(int* num, int i, int j) {  
+    int tmp = num[j];  //待固定的原素暫時存於tmp 
+    int k;
+    for(k = j; k > i; k--) {
+        num[k] = num[k - 1];  //剩下的元素向後推 
+    }
+    num[i] = tmp; //把固定元素放於首位 
+}
+
+void copy(int* from, int* to) { //複製陣列函式 
+    int i;
+    for(i = 0; i < N; i++) {
+        to[i] = from[i];
+    }
+}
+
+void print(int* num) {
+    int i;
+    for(i = 0; i < N; i++) {
+        printf("%d ", num[i]);   
+		count++; //計算總共印了多少數字 
+    }
+    printf("\n");
+}
+
