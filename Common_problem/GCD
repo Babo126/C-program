@@ -1,0 +1,17 @@
+/*CGD(最大公因數本身是一種recursion的作法)*/
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int i, j;
+	scanf("%d %d", &i, &j);
+	printf("Max: %d", gcd(i, j));
+}
+
+int gcd(int a, int b){
+	if(b == 0){
+		return a;
+	}
+	else{
+		return gcd(b, a%b);
+	}
+}
