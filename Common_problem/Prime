@@ -1,0 +1,28 @@
+/*質數判斷*/ 
+#include<stdio.h>
+
+int main(){
+	int a;
+	
+	printf("Enter number:\n");
+	while(scanf("%d", &a) != EOF){
+		if(a == 1){
+			printf("No\n");
+		}
+		else{
+			int i, ans=1; //預設是質數
+			for(i=2;i<a;i++){
+				if(a%i == 0){
+					ans = 0; //只要找到一個因數，就不是質數
+				}
+			}
+			
+			if(ans == 1){
+				printf("Yes\n");
+			}
+			else{
+				printf("No\n");
+			}		
+		}
+	}
+}
