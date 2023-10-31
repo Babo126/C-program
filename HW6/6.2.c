@@ -5,7 +5,9 @@
 int main(){
 	int m, n;
 	printf("Please input a pair of integers (m, n): ");
+	//連續輸入
 	while(scanf("%d %d", &m, &n) != EOF){
+		//錯誤值處理
 		if(m == 0 && n == 0){
 			printf("Wrong input, input again!\n");
 			continue;
@@ -14,6 +16,7 @@ int main(){
 			printf("0 is not the power of any number, input again.\n");
 			continue;
 		}
+		//檢查m是否為n的倍數
 		else{
 			if(m % n == 0){
 				printf("%d is the power of %d\n", m, n);
